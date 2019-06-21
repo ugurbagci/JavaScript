@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        function Tikla() {
+        alert ('Merhaba Dünya')
+        }
+
+        function Click() {
+            alert('JS gelmicen hee')
+        }
+
+        function Kedi() {
+            alert('kedi heee')
+        }
+        function OnKeyDown() {
+            alert('bastın kırdın bee')
+        }
+
+        function Load() {
+            alert("Sayfa title ile load oldu")
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        function Yaz() {
+            alert("Sayfa Üzerindeki text'e metin giriliyor")
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <input type="button" id="btnTikla" value"Click!"
+           onclick="JavaScript: Tikla()" />
+
+
+    <div id="ornek1">
+        <h5>1.Event: onchange</h5>
+        <div>JavaScrite Hoş geldiniz..!</div>
+        <input type="text" onchange="Yaz()" />
+    </div>
+
+    <div id="ornek">
+        <h5>Event: onclick</h5>
+        <div>javascripte hoç geldin bro..!</div>
+        <input type="button" name="btnTikla" value="Tikla" 
+               onclick="Click()"/>
+    </div>
+
+    <div id="ornek2">
+        <h5>Event: onmouseover</h5>
+        <div>Kedidir kediiii</div>
+        <input type="button" name="btnTikla" value="Kedi" onmouseover="Kedi()"/> 
+    </div>
+
+    <div id="ornek">
+        <h5>Event: onkeydown</h5>
+        <input type="text" onkeydown="OnKeyDown()"/>
+    </div>
+
+    <div>
+        <h5>Event: onload</h5>
+        <input type="text" onload="Load"/>
+    </div>
+
+
+</body>
+</html>

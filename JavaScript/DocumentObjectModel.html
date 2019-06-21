@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        var yeniHalMi = false;
+
+        function IcerigiDegistir() {
+            var x = document.getElementById("paragraf");
+                x.innerHTML = "Bu degisiklik javascript tarafından yapıldı";
+        }
+    </script>
+
+
+    <div>
+        <h4>Get Element By ID</h4>
+        <p id="paragraf">Javascript ile herhangi bir elementin içeriğini değiştirebilirsiniz</p>
+        <input type="button" name="btn" id="Degistir" value="paragraf degistir" onclick="IcerigiDegistir()" />
+    </div>
+
+</body>
+</html>

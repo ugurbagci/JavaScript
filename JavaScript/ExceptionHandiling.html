@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <!--JavaScripte hata yönetimi
+        JavaScrip içerisinde hata yönetimi c# da olduğu gibi Try-Catch blokları sayesinde yakalanabilir...
+        -->
+
+
+</head>
+<body>
+    <p> 5 ile 10 arasında bir sayı giriniz: </p>
+    <input id="demo" type="text" />
+    <button type="button" onclick="MyFunction()">Test</button>
+    <p id="message"></p>
+
+    <script type="text/javascript">
+
+        function MyFunction() {
+            var message, x;
+            message = document.getElementById("message");
+            message.innerHTML = "";
+            x = document.getElementById("demo").value;
+            try {
+                if (x == "") {
+                    throw "degeri boş bıraktınız";
+                }
+                if (isNaN(x)) {
+                    throw "girilen deger sayi degil!";
+                }
+                x = Number(x);
+                if (x < 5) {
+                    throw "5 den kucuk deger girdiniz";
+                }
+                if (x > 10) {
+                    throw "10 dan buyuk deger girdiniz";
+                }
+            } catch (err) {
+                message.innerHTML = "Input is " + err;
+            }
+            finally {
+                message.innerHTML = "Islem basarili tebrikler";
+            }
+        }
+    </script>
+
+    <p>Tc kimlik numaranızı giriniz</p>
+    <input id="demo1" type="text" />
+    <button type="button" onclick="MyCat()">Test</button>
+    <p id="message"></p>
+
+   
+
+        <script type="text/javascript"> 
+            function MyCat() {
+                var message, y;
+                message = document.getElementById("message");
+                message.innerHTML = "";
+                y = document.getElementById("demo1").value;
+
+                try {
+                    if (y == "") {
+                        throw "az çok demeyelim boş geçmeyelim lütfen";
+                    }
+
+                    if (isNaN(y)) {
+                        throw "lütfen sayi giriniz!!";
+                    }
+
+                    if (text.length(y) < 11 ) {
+                        throw "lütfen 11 haneli sayı giriniz!!";
+                    }
+                    
+                } catch (ex) {
+                    message.innerHTML = "Input is " + ex;
+                }
+                
+            }
+        </script>
+
+    <script>
+        function MesajKutusu() {
+            alert("Mesaj Kutusu");
+        }
+
+
+
+
+        function Mesaj()
+        var result = confirm("evet hayir mesaj kutusu");
+        if (result) {
+            alert("tamama basildi");
+        }
+        else {
+            alert("iptale basildi");
+        }
+
+    </script>
+
+    <div>
+        <input type="button" name="btnTikla" value="Tikla" onclick="return alert('MesajKutusu')" />
+    </div>
+
+
+
+    <div>
+        <input type="button" name="btnTikla" value="Mesaj Kutusu-Dialaog Result" onclick="Mesaj()" />
+    </div>
+
+
+</body>
+</html>
